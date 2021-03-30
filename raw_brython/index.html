@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.1/brython.js"
+            integrity="sha512-bF2SeYie9u0aV7LMuK2lWGVKgakWUjZrsTSP/8RQn1xSjIJO87QQbqfK7al5JKNnIhgR6DY10qiRnFb1OeqQ2Q=="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.1/brython_stdlib.js"
+            integrity="sha512-wYP7mTZHsGAGcwwof7CHkCfHXBNhpqpfQbnNaWCCzfba1QWl81KNhG5FmPGfcRPPtV0fmFCJSfmq0KKO294mrQ=="
+            crossorigin="anonymous">
+    </script>
+    <title>Title</title>
+</head>
+<body onload="brython()">
+<script type="text/python">
+    from browser import document, console, alert
+
+
+    def show(e):
+        console.log("Hello console!")
+        alert('Hello Alert!')
+        document['hello'] <= 'Hello click!'
+
+
+    document['alert-btn'].bind('click', show)
+
+    document <= "Hello World test!"
+</script>
+
+<h2 id="hello">Hello!</h2>
+<input type="text" id="text" placeholder="Введите текст">
+<button id="alert-btn">alert</button>
+</body>
+</html>
